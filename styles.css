@@ -7,6 +7,14 @@ body {
   background-repeat: no-repeat;
 }
 
+h1 {
+  background: linear-gradient(gold, black);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+}
+
 .logo-container {
     justify-self: center;
 }
