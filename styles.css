@@ -5,104 +5,369 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  color: white;
 }
 
-h1 {
-  background: linear-gradient(gold, black);
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
 
+.text-box {
+
+    display: inline-block;
+
+    background: black;
+
+    padding: 10px 40px;
+
+    border-radius: 25px;
+
+    background-size: 200% 200%;
+
+    animation: gradientMove 5s ease infinite;
+}
+
+@keyframes gradientMove {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.text {
+
+    margin: 0;
+
+    font-size: 4rem;
+    font-weight: bold;
+
+    background: linear-gradient(
+        90deg,
+        #ffd700,
+        #fff4b0,
+        #d4af37,
+        #8b7500
+    );
+
+    background-size: 300% 300%;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    letter-spacing: 3px;
+
+    animation: gradientMove 5s ease infinite;
 }
 
 .logo-container {
-    justify-self: center;
+
+    display: flex;
+
+    justify-content: center;
+
+    width: 100%;
 }
 
 .logo {
+
     width: 400px;
+
+    max-width: 90%;
+
     height: auto;
 }
 
+/* CONTAINER */
+.timer-section{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+
+    padding:50px 20px;
+}
+
+/* =========================
+   TIMER CARD
+========================= */
+
+.timer-card{
+
+    background:rgba(0,0,0,0.85);
+
+    border:1px solid #d4af37;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:
+        0 0 20px rgba(255,215,0,0.15);
+
+    transition:0.3s ease;
+}
+
+.timer-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 0 30px rgba(255,215,0,0.4);
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.timer-title{
+
+    margin-bottom:25px;
+
+    font-size:2rem;
+
+    background:linear-gradient(
+        90deg,
+        #ffd700,
+        #fff4b0,
+        #d4af37
+    );
+
+    background-clip:text;
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+}
+
+/* =========================
+   TIMER LAYOUT
+========================= */
+
+.timer{
+
+    display:flex;
+
+    gap:15px;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+}
+
+/* =========================
+   TIME BOX
+========================= */
+
+.time-box{
+
+    background:#111;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    min-width:85px;
+
+    border:1px solid #d4af37;
+
+    transition:0.3s ease;
+}
+
+.time-box:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:
+        0 0 20px rgba(255,215,0,0.5);
+}
+
+/* =========================
+   NUMBERS
+========================= */
+
+.time-box span{
+
+    font-size:2.5rem;
+
+    font-weight:bold;
+
+    background:linear-gradient(
+        90deg,
+        #ffd700,
+        #fff4b0,
+        #d4af37
+    );
+
+    background-clip:text;
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+}
+
+/* =========================
+   LABELS
+========================= */
+
+.time-box p{
+
+    margin-top:10px;
+
+    color:#ccc;
+}
+
 header {
-  background: #111;
-  color: white;
-  padding: 11px;
-  text-align: center;
-  display: space-between;
-  justify-content: center;
-  align-items: center;
+
+    background: rgba(54, 52, 52, 0.9);
+
+    color: white;
+
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
 }
 
 main {
-  padding: 20px;
-  text-align: center;
+    padding: 20px;
+    text-align: center;
 }
 
 .price {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
-  font-weight: 600;
-  color: #27ae60; /* green = money vibe */
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 2rem;
+
+    font-weight: 600;
+
+    color: #27ae60;
 }
 
 #searchBar {
-  margin-top: 10px;
-  padding: 10px;
-  width: 60%;
-  border-radius: 5px;
-  border: none;
+
+    width: 60%;
+
+    max-width: 500px;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 1rem;
 }
 
 .vehicle-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 20px;
+
+    padding: 20px;
 }
 
 .vehicle-card {
-  background: rgb(255, 253, 253);
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: 0.3s;
+
+    background: rgba(255,255,255,0.95);
+
+    color: black;
+
+    border-radius: 15px;
+
+    padding: 15px;
+
+    box-shadow:
+        0 4px 8px rgba(0,0,0,0.2);
+
+    transition: 0.3s ease;
 }
 
 .vehicle-card:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .vehicle-card img {
-  width: 100%;
-  border-radius: 10px;
+
+    width: 100%;
+
+    border-radius: 10px;
 }
 
 .section-title {
-  text-align: center;
+    text-align: center;
 }
 
 .popup {
-  display: none; /* hidden by default */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.7);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
 }
 
+
 .popup-content {
-  background-image: url('https://r2.fivemanage.com/GnY0skMgFle2bnAvoRwwL/LXBbackground.jpg');
-  background-size: cover;
-  padding: 30px;
-  border-radius: 12px;
-  text-align: center;
-  width: 500px;
-  position: relative;
+
+    background-image: url('https://r2.fivemanage.com/GnY0skMgFle2bnAvoRwwL/LXBbackground.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    width: 500px;
+
+    max-width: 90%;
+
+    position: relative;
+
+    color: white;
+
+    box-shadow:
+        0 0 30px rgba(255,215,0,0.3);
 }
 
 .popup-content h2 {
@@ -110,24 +375,39 @@ main {
 }
 
 .popup-content button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #e74c3c;
-  border: none;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
+
+    margin-top: 15px;
+
+    padding: 10px 20px;
+
+    background: #e74c3c;
+
+    border: none;
+
+    color: white;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
 }
 
 .popup-content button:hover {
-  background: #c0392b;
+    background: #c0392b;
 }
 
 /* Close button */
 .close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 20px;
-  cursor: pointer;
+
+    position: absolute;
+
+    top: 10px;
+    right: 15px;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    color: white;
 }
