@@ -86,7 +86,6 @@ body {
     height: auto;
 }
 
-/* CONTAINER */
 .timer-section{
 
     display:flex;
@@ -99,10 +98,6 @@ body {
 
     padding:50px 20px;
 }
-
-/* =========================
-   TIMER CARD
-========================= */
 
 .timer-card{
 
@@ -130,10 +125,6 @@ body {
         0 0 30px rgba(255,215,0,0.4);
 }
 
-/* =========================
-   TITLE
-========================= */
-
 .timer-title{
 
     margin-bottom:25px;
@@ -153,10 +144,6 @@ body {
     -webkit-text-fill-color:transparent;
 }
 
-/* =========================
-   TIMER LAYOUT
-========================= */
-
 .timer{
 
     display:flex;
@@ -167,10 +154,6 @@ body {
 
     flex-wrap:wrap;
 }
-
-/* =========================
-   TIME BOX
-========================= */
 
 .time-box{
 
@@ -195,10 +178,6 @@ body {
         0 0 20px rgba(255,215,0,0.5);
 }
 
-/* =========================
-   NUMBERS
-========================= */
-
 .time-box span{
 
     font-size:2.5rem;
@@ -217,10 +196,6 @@ body {
 
     -webkit-text-fill-color:transparent;
 }
-
-/* =========================
-   LABELS
-========================= */
 
 .time-box p{
 
@@ -397,7 +372,6 @@ main {
     background: #c0392b;
 }
 
-/* Close button */
 .close-btn {
 
     position: absolute;
@@ -411,3 +385,4 @@ main {
 
     color: white;
 }
+
