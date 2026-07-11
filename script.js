@@ -2,16 +2,30 @@ const searchBar = document.getElementById("searchBar");
 const vehicles = document.querySelectorAll(".vehicle-card");
 
 searchBar.addEventListener("keyup", () => {
-  const searchValue = searchBar.value.toLowerCase();
 
-  vehicles.forEach(vehicle => {
-    const name = vehicle.getAttribute("data-name").toLowerCase();
+    let input =
+    searchBar.value.toLowerCase();
 
-    if (name.includes(searchValue)) {
-      vehicle.style.display = "block";
-    } else {
-      vehicle.style.display = "none";
-    }
+    // SELECT VEHICLE CARDS
+    let cards =
+    document.querySelectorAll(".vehicle-card");
+
+    cards.forEach(card => {
+
+        let text =
+        card.innerText.toLowerCase();
+
+        // SHOW/HIDE
+        if(text.includes(input)){
+
+            card.style.display = "block";
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
   });
 });
 
