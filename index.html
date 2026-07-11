@@ -2,19 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vehicle Catalog</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <nav class="navbar">
+    <div class="top-nav">
+    <div class="nav-left">
+      
+      <div class="nav-links">
+        <a href="#lux">Lux Models</a>
+        <a href="#bennys">Benny's Models</a>
+      </div>
+       <div class="search-container">
 
-<header class="navbar">
-    <div class="logo-container">
-      <img src="https://r2.fivemanage.com/GnY0skMgFle2bnAvoRwwL/Luxbybennyslogo.png" alt="Benny's Logo" class="logo">
+        <input
+        type="text"
+        placeholder="Search vehicles..."
+        id="searchBar">
+       
+     </div>
     </div>
-    
+    </div>
+  <!-- TWO TIMER SECTION -->
 <section class="timer-section">
 
-    
+    <!-- TIMER 1 -->
     <div class="timer-card">
 
         <h2 class="timer-title">
@@ -46,8 +60,10 @@
         </div>
 
     </div>
-
-    
+    <div class="logo-container">
+        <img src="https://r2.fivemanage.com/GnY0skMgFle2bnAvoRwwL/Luxbybennyslogo.png" alt="Benny's Logo" class="logo">
+      </div>
+    <!-- TIMER 2 -->
     <div class="timer-card">
 
         <h2 class="timer-title">
@@ -81,8 +97,7 @@
     </div>
 
 </section>
-  <input type="text" id="searchBar" placeholder="Search vehicles...">
-</header>
+  </nav>
 
 <main>
   <div class="text-box">  
@@ -105,12 +120,6 @@
     <div class="vehicle-card" data-name="Bravado Remus Tsuki">
       <img src="https://r2.fivemanage.com/GnY0skMgFle2bnAvoRwwL/BravadoRemusTsuki.png">
       <h2>Bravado Remus Tsuki</h2>
-      <p class="price">$1,500,000</p>
-    </div>
-
-    <div class="vehicle-card" data-name="Bravado Jester MK4">
-      <img src="https://r2.fivemanage.com/GnY0skMgFle2bnAvoRwwL/BravadoJesterMK4.png">
-      <h2>Bravado Jester MK4</h2>
       <p class="price">$1,500,000</p>
     </div>
 </div>
@@ -145,6 +154,49 @@
       <img src="https://r2.fivemanage.com/GnY0skMgFle2bnAvoRwwL/BNYSpec-B.png">
       <h2>BNY Spec-B</h2>
       <p class="price">$1,100,000</p>
+    </div>
+
+    <div class="vehicle-card" data-name="BNY Spec-A">
+      <img src="https://r2.fivemanage.com/GnY0skMgFle2bnAvoRwwL/BNYSpec-A.png">
+      <h2>BNY Spec-A</h2>
+      <p class="price">$1,420,000</p>
+    </div>
+
+      
+    <div class="vehicle-card" data-name="BNY PXD 2002">
+      <img src="https://r2.fivemanage.com/GnY0skMgFle2bnAvoRwwL/BNYPXD2002.png">
+      <h2>BNY PXD 2002</h2>
+      <p class="price">$1,400,000</p>
+    </div>
+
+    <div class="vehicle-card" data-name="BNY MXM 1994">
+      <img src="https://r2.fivemanage.com/GnY0skMgFle2bnAvoRwwL/BNYMXM1994.png">
+      <h2>BNY MXM 1994</h2>
+      <p class="price">$1,045,000</p>
+    </div>
+
+    <div class="vehicle-card" data-name="BNY LTX 1996">
+      <img src="https://r2.fivemanage.com/GnY0skMgFle2bnAvoRwwL/BNYLTX1996.png">
+      <h2>BNY LTX 1996</h2>
+      <p class="price">$1,650,000</p>
+    </div>
+
+    <div class="vehicle-card" data-name="BNY KXG 1994">
+      <img src="https://r2.fivemanage.com/GnY0skMgFle2bnAvoRwwL/BNYKXG1994.png">
+      <h2>BNY KXG 1994</h2>
+      <p class="price">$1,500,000</p>
+    </div>
+
+    <div class="vehicle-card" data-name="BNY KWX 2004">
+      <img src="https://r2.fivemanage.com/GnY0skMgFle2bnAvoRwwL/BNYKWX2004.png">
+      <h2>BNY KWX 2004</h2>
+      <p class="price">$1,110,000</p>
+    </div>
+
+    <div class="vehicle-card" data-name="BNY ERX 2002">
+      <img src="https://r2.fivemanage.com/GnY0skMgFle2bnAvoRwwL/BNYERX2002.png">
+      <h2>BNY ERX 2002</h2>
+      <p class="price">$1,395,000</p>
     </div>
 </section>
 
