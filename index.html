@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Benny's Models | Luxury Motors</title>
+    <link rel="stylesheet" href="bennys2.css">
+ <nav class="navbar">
+   <!-- LEFT TIMER -->
+    <div class="side-timer left-timer">
+
+        <h3>🔥 Flash Sale</h3>
+
+        <div class="timer">
+
+            <div class="time-box">
+                <span id="days">00</span>
+                <small>Days</small>
+            </div>
+
+            <div class="time-box">
+                <span id="hours">00</span>
+                <small>Hours</small>
+            </div>
+            
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <small>Minutes</small>
+        </div>
+
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <small>Seconds</small>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="nav-content">
+
+        <!-- LOGO -->
+        <div class="brand">
+
+            <img
+            src="https://r2.fivemanage.com/GnY0skMgFle2bnAvoRwwL/Luxbybennyslogo.png"
+            alt="Lux by Benny's Logo"
+            class="logo">
+
+            
+
+        </div>
+
+
+        <!-- NAV LINKS -->
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="Lux.html">
+                Lux
+            </a>
+
+            <a href="bennys.html">
+                Benny's
+            </a>
+
+        </div>
+
+
+        <!-- SEARCH BAR -->
+        <input
+        type="text"
+        class="search-bar"
+        id="searchBar"
+        placeholder="Search Benny's models...">
+
+    </div>
+  <!-- RIGHT TIMER -->
+    <div class="side-timer right-timer">
+
+        <h3>🚗 New Inventory</h3>
+
+         <div class="timer">
+
+            <div class="time-box">
+                <span id="days">00</span>
+                <small>Days</small>
+            </div>
+
+            <div class="time-box">
+                <span id="hours">00</span>
+                <small>Hours</small>
+            </div>
+            
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <small>Minutes</small>
+            </div>
+
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <small>Seconds</small>
+            </div>
+
+        </div>
+
+    </div>
+
+  
+
+</nav>
+
+
+
+
+<!-- =========================
+     Slideshow
+========================= -->
+
+ <main>
+<!-- =========================
+     VEHICLE SLIDESHOW
+========================= -->
+
+<section class="slideshow-section">
+
+    <div class="slideshow">
+
+        <!-- SLIDE 1 -->
+        <div class="slide active">
+
+            <img
+                src="https://r2.fivemanage.com/GnY0skMgFle2bnAvoRwwL/UbermachtGT4DTM.png"
+                alt="Ubermacht GT4DTM">
+
+            <div class="slide-info">
+
+                <h2>Ubermacht GT4DTM</h2>
+
+                <p>Premium performance and style.</p>
+
+                <span>$1,500,000</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- SLIDE 2 -->
+        <div class="slide">
+
+            <img
+                src="https://r2.fivemanage.com/GnY0skMgFle2bnAvoRwwL/BNYLTX1996.png"
+                alt="Benny's Vehicle">
+
+            <div class="slide-info">
+
+                <h2>BNY LTX 1996</h2>
+
+                <p>Built for performance</p>
+
+                <span>$1,650,000</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- SLIDE 3 -->
+        <div class="slide">
+
+            <img
+                src="https://r2.fivemanage.com/GnY0skMgFle2bnAvoRwwL/BNYKXG1994.png"
+                alt="Benny's Vehicle">
+
+            <div class="slide-info">
+
+                <h2>BNY KXG 1994</h2>
+
+                <p>Designed for speed</p>
+
+                <span>$1,500,000</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- PREVIOUS BUTTON -->
+
+        <button
+            class="slide-btn prev"
+            onclick="changeSlide(-1)">
+            ❮
+        </button>
+
+
+        <!-- NEXT BUTTON -->
+
+        <button
+            class="slide-btn next"
+            onclick="changeSlide(1)">
+            ❯
+        </button>
+
+
+        <!-- DOTS -->
+
+        <div class="slide-dots">
+
+            <span
+                class="dot active"
+                onclick="currentSlide(1)">
+            </span>
+
+            <span
+                class="dot"
+                onclick="currentSlide(2)">
+            </span>
+
+            <span
+                class="dot"
+                onclick="currentSlide(3)">
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+ 
+
+ </main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+ <footer>
+
+    © 2026 Lux by Benny's
+
+ </footer>
+ 
+ <script>/* =========================
+   COUNTDOWN DATE
+========================= */
+
+const countdownDate = new Date(
+    "December 31, 2026 23:59:59"
+).getTime();
+
+
+/* =========================
+   UPDATE TIMERS
+========================= */
+
+function updateTimers() {
+
+    const now = new Date().getTime();
+
+    const distance = countdownDate - now;
+
+
+    /* =========================
+       TIMER HAS ENDED
+    ========================= */
+
+    if (distance <= 0) {
+
+        document.getElementById("days").textContent = "00";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
+
+        return;
+    }
+
+
+    /* =========================
+       CALCULATIONS
+    ========================= */
+
+    const days = Math.floor(
+        distance / (1000 * 60 * 60 * 24)
+    );
+
+    const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) /
+        (1000 * 60 * 60)
+    );
+
+    const minutes = Math.floor(
+        (distance % (1000 * 60 * 60)) /
+        (1000 * 60)
+    );
+
+    const seconds = Math.floor(
+        (distance % (1000 * 60)) /
+        1000
+    );
+
+
+    /* =========================
+       DISPLAY
+    ========================= */
+
+    document.getElementById("days").textContent =
+        String(days).padStart(2, "0");
+
+    document.getElementById("hours").textContent =
+        String(hours).padStart(2, "0");
+
+    document.getElementById("minutes").textContent =
+        String(minutes).padStart(2, "0");
+
+    document.getElementById("seconds").textContent =
+        String(seconds).padStart(2, "0");
+
+}
+
+
+/* =========================
+   START TIMER
+========================= */
+
+updateTimers();
+
+setInterval(updateTimers, 1000);</script>
+ </head>
+</html>
+<script>
+
+let slideIndex = 1;
+
+let slideTimer;
+
+
+/* =========================
+   SHOW SLIDE
+========================= */
+
+function showSlide(number){
+
+    const slides =
+        document.querySelectorAll(".slide");
+
+    const dots =
+        document.querySelectorAll(".dot");
+
+
+    if(number > slides.length){
+
+        slideIndex = 1;
+
+    }
+
+
+    if(number < 1){
+
+        slideIndex = slides.length;
+
+    }
+
+
+    slides.forEach(function(slide){
+
+        slide.classList.remove("active");
+
+    });
+
+
+    dots.forEach(function(dot){
+
+        dot.classList.remove("active");
+
+    });
+
+
+    slides[slideIndex - 1]
+        .classList.add("active");
+
+
+    dots[slideIndex - 1]
+        .classList.add("active");
+
+}
+
+
+/* =========================
+   NEXT / PREVIOUS
+========================= */
+
+function changeSlide(number){
+
+    slideIndex += number;
+
+    showSlide(slideIndex);
+
+    restartTimer();
+
+}
+
+
+/* =========================
+   DOT NAVIGATION
+========================= */
+
+function currentSlide(number){
+
+    slideIndex = number;
+
+    showSlide(slideIndex);
+
+    restartTimer();
+
+}
+
+
+/* =========================
+   AUTOMATIC SLIDESHOW
+========================= */
+
+function startTimer(){
+
+    slideTimer = setInterval(function(){
+
+        slideIndex++;
+
+        showSlide(slideIndex);
+
+    }, 5000);
+
+}
+
+
+/* =========================
+   RESTART TIMER
+========================= */
+
+function restartTimer(){
+
+    clearInterval(slideTimer);
+
+    startTimer();
+
+}
+
+
+/* =========================
+   START
+========================= */
+
+showSlide(slideIndex);
+
+startTimer();
+
+</script>
